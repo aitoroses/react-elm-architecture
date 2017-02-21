@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "start": "node fuse.js"
+  },
+  "dependencies": {
+    "@types/react": "^15.0.11",
+    "@types/react-dom": "^0.14.23",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-elm": "1.0.0",
+    "tslib": "^1.5.0",
+    "typescript": "^2.1.6"
+  },
+  "devDependencies": {
+    "fuse-box": "^1.3.119"
+  }
+}

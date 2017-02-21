@@ -7,12 +7,15 @@ const fuseBox = FuseBox.init({
     bundleReference: "./sourcemaps.js.map",
     outFile: "./build/sourcemaps.js.map",
   },
+  alias: {
+    'react-elm': 'react-elm/src/index.ts'
+  },
   plugins: [
     SourceMapPlainJsPlugin()
   ]
 })
 
-fuseBox.devServer(">index.ts [**/*.ts] [**/*.tsx] +react-dom +react", {
+fuseBox.devServer(`>index.ts`, {
   root: './',
   port: 8080
 });

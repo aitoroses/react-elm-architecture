@@ -1,19 +1,25 @@
 {
-  "name": "Elm",
+  "name": "react-elm-architecture",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": {},
+  "repository": "git@github.com:aitoroses/react-elm-architecture.git",
+  "author": "<aitor.oses@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "@types/react": "^15.0.11",
-    "fuse-box": "^1.3.119",
-    "typescript": "^2.1.6"
-  },
   "scripts": {
-    "start": "node fuse.js"
+    "build": "cd packages/react-elm && npm run build",
+    "start": "cd packages/react-elm-example && npm run start"
   },
   "dependencies": {
+    "@types/react": "^15.0.11",
+    "@types/react": "^15.0.11",
+    "@types/react-dom": "^0.14.23",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "tslib": "^1.5.0"
+
+  },
+  "devDependencies": {
+    "lerna": "2.0.0-beta.37"
   }
 }

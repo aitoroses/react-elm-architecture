@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as Counter from '../Counter/Counter'
-import { forward } from 'react-elm'
+import { forward } from 'elm'
 
 export type Model = {
   topCounter: Counter.Model,

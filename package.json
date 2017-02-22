@@ -1,13 +1,14 @@
 {
-  "name": "react-elm-architecture",
+  "name": "elm-architecture",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:aitoroses/react-elm-architecture.git",
+  "repository": "git@github.com:aitoroses/elm-architecture.git",
   "author": "<aitor.oses@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cd packages/react-elm && npm run build",
-    "start": "cd packages/react-elm-example && npm run start"
+    "postinstall": "lerna bootstrap",
+    "build": "cd packages/elm && npm run build",
+    "start": "cd packages/elm-example && npm run start"
   },
   "dependencies": {
     "@types/react": "^15.0.11",
@@ -20,6 +21,7 @@
 
   },
   "devDependencies": {
-    "lerna": "2.0.0-beta.37"
+    "lerna": "2.0.0-beta.37",
+    "npm-run-all": "^4.0.1"
   }
 }

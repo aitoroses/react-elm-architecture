@@ -1,4 +1,4 @@
-import { HtmlApp } from 'react-elm'
+import { HtmlApp } from 'elm'
 import * as CounterPair from './CounterPair'
 
 export const program = HtmlApp.beginnerProgram<CounterPair.Model>({

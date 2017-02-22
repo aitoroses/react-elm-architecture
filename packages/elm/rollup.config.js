@@ -10,6 +10,7 @@ export default {
     format : 'umd',
     moduleName : 'ReactELM',
     external: ['react'],
+    sourceMap: true,
     globals: {
       react: 'React'
     },

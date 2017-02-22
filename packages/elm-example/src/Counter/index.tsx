@@ -1,4 +1,4 @@
-import { HtmlApp } from 'react-elm'
+import { HtmlApp } from 'elm'
 import * as Counter from './Counter'
 
 export const program = HtmlApp.beginnerProgram<Counter.Model>({

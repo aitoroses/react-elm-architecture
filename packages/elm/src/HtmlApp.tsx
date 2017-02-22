@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { createSignal } from './util'
 
 type BeginnerProgramProps<T> = {
   view: (signal: Function, model: T) => React.ReactElement<any>
@@ -7,20 +8,16 @@ type BeginnerProgramProps<T> = {
 }
 
 class BeginnerProgram<T> extends React.Component<BeginnerProgramProps<T>, any> {
+
   constructor(props) {
     super(props)
     this.state = { model: props.init() }
   }
 
-  signal = (action) => () => {
-    console.debug(action)
-    if (this.props.update) {
-      this.setState({ model: this.props.update(action, this.state.model) })
-    } else {
-      this.setState({ model: action(this.state.model) })
-    }
-  }
-
+  signal = createSignal(
+    () => this.state.model,
+    model => this.setState({ model })
+  )(this.props.update)
 
   render() {
     return this.props.view(this.signal, this.state.model)

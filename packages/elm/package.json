@@ -1,19 +1,18 @@
 {
-  "name": "react-elm",
+  "name": "elm",
   "version": "1.0.0",
-  "main": "dist/react-elm.min.js",
+  "main": "./dist/elm.min.js",
   "typings": "src/index.ts",
   "repository": {
-    "git": "https://github.com/aitoroses/react-elm-architecture"
+    "git": "https://github.com/aitoroses/elm-architecture"
   },
   "license": "MIT",
   "scripts": {
-    "build:dev": "rollup -c rollup.config.js --output dist/react-elm.js",
-    "build:prod": "NODE_ENV=production rollup -c rollup.config.js --output dist/react-elm.min.js",
+    "build:dev": "rollup -c rollup.config.js --output dist/elm.js",
+    "build:prod": "NODE_ENV=production rollup -c rollup.config.js --output dist/elm.min.js",
     "build": "run-p build:*"
   },
   "devDependencies": {
-    "npm-run-all": "^4.0.1",
     "rollup": "^0.41.4",
     "rollup-plugin-commonjs": "^7.0.0",
     "rollup-plugin-node-resolve": "^2.0.0",

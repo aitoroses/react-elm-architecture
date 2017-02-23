@@ -10,7 +10,8 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         modules: ["node_modules"],
         alias: {
-            'elm': 'elm/src/index.ts'
+            'elmtropy': 'elmtropy/src/index.ts',
+            'react-elmtropy': 'react-elmtropy/src/index.ts'
         }
     },
     module: {

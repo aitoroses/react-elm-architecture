@@ -1,15 +1,15 @@
 {
-  "name": "elm",
+  "name": "react-elmtropy",
   "version": "1.0.0",
-  "main": "./dist/elm.min.js",
+  "main": "./dist/react-elmtropy.min.js",
   "typings": "src/index.ts",
   "repository": {
-    "git": "https://github.com/aitoroses/elm-architecture"
+    "git": "https://github.com/aitoroses/elmtropy-architecture"
   },
   "license": "MIT",
   "scripts": {
-    "build:dev": "rollup -c rollup.config.js --output dist/elm.js",
-    "build:prod": "NODE_ENV=production rollup -c rollup.config.js --output dist/elm.min.js",
+    "build:dev": "rollup -c rollup.config.js --output dist/react-elmtropy.js",
+    "build:prod": "NODE_ENV=production rollup -c rollup.config.js --output dist/react-elmtropy.min.js",
     "build": "run-p build:*"
   },
   "devDependencies": {
@@ -23,7 +23,8 @@
     "typescript": "^2.1.6"
   },
   "dependencies": {
-    "@types/react": "^15.0.11",
+    "@types/react": "^15.0.12",
+    "elmtropy": "1.0.0",
     "react": "^15.4.2"
   }
 }

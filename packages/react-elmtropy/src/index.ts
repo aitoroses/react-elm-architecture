@@ -1,4 +1,4 @@
 import * as HtmlApp from './HtmlApp'
 
-export { forward, message } from './util'
+export const targetValue = e => e.target.value
 export { HtmlApp }

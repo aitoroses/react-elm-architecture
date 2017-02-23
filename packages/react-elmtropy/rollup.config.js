@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV != "production"
 export default {
     entry : './src/index.ts',
     format : 'umd',
-    moduleName : 'ReactELM',
+    moduleName : 'ReactElmtropy',
     external: ['react'],
     sourceMap: true,
     globals: {

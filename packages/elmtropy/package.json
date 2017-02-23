@@ -1,0 +1,26 @@
+{
+  "name": "elmtropy",
+  "version": "1.0.0",
+  "main": "./dist/elmtropy.min.js",
+  "typings": "src/index.ts",
+  "repository": {
+    "git": "https://github.com/aitoroses/elmtropy-architecture"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:dev": "rollup -c rollup.config.js --output dist/elmtropy.js",
+    "build:prod": "NODE_ENV=production rollup -c rollup.config.js --output dist/elmtropy.min.js",
+    "build": "run-p build:*"
+  },
+  "devDependencies": {
+    "rollup": "^0.41.4",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2",
+    "tslib": "^1.5.0",
+    "typescript": "^2.1.6"
+  },
+  "dependencies": {}
+}

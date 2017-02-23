@@ -1,13 +1,9 @@
 import * as React from 'react'
-import { createSignal } from './util'
+import { createSignal, BeginnerProgramProps } from 'elmtropy'
 
-type BeginnerProgramProps<T> = {
-  view: (signal: Function, model: T) => React.ReactElement<any>
-  update?: (action, model: T) => T
-  init: (...args) => T
-}
+type Props<T> = BeginnerProgramProps<T, React.ReactElement<any>>
 
-class BeginnerProgram<T> extends React.Component<BeginnerProgramProps<T>, any> {
+class BeginnerProgram<T> extends React.Component<Props<T>, any> {
 
   constructor(props) {
     super(props)
@@ -24,6 +20,6 @@ class BeginnerProgram<T> extends React.Component<BeginnerProgramProps<T>, any> {
   }
 }
 
-type beginnerProgramType = <T>(p: BeginnerProgramProps<T>) => () => React.ReactElement<T>
+type beginnerProgramType = <T>(p: Props<T>) => () => React.ReactElement<T>
 export const beginnerProgram: beginnerProgramType =
   p => () => React.createFactory(BeginnerProgram)(p)
